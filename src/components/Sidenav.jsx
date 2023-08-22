@@ -23,7 +23,7 @@ function Sidenav() {
             <TiTimes onClick={handleNav} />
           </div>
 
-          <div className="fixed flex flex-col justify-center items-center w-full h-screen sm:hidden bg-white/40 z-[20]  ease-in-out duration-100 ">
+          <div className="fixed flex flex-col justify-center items-center w-full h-screen sm:hidden bg-white z-[20]  ease-in-out duration-100 ">
             <a
               onClick={handleNav}
               href="#hero"
