@@ -9,7 +9,6 @@ function Work({ where, position, duration, details }) {
             {duration}
           </span>
           <span className="text-red-600 font-semibold">{position}</span>
-          <span className="text-sm font-mono">{duration}</span>
         </p>
         <p className="text-red-800/80 font-semibold ">{where}</p>
         <p className="font-sans serif">{details}</p>

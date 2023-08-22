@@ -29,25 +29,25 @@ function Hero() {
           </h2>
           <div className="flex m-2">
             <a
-              href="#facebook"
+              href="https://www.facebook.com/abhi.darnal001"
               className="bg-red-600 text-white p-2 rounded-full active:scale-95 mx-3"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#instagram"
+              href="https://www.instagram.com/abinashdarnaloffi/"
               className="bg-red-600 text-white p-2 rounded-full active:scale-95 mx-3"
             >
               <FaInstagram />
             </a>
             <a
-              href="#linkin"
+              href="https://www.linkedin.com/in/abinash-darnal-86436b288/"
               className="bg-red-600 text-white p-2 rounded-full active:scale-95 mx-3"
             >
               <FaLinkedin />
             </a>
             <a
-              href="#google"
+              href="#"
               className="bg-red-600 text-white p-2 rounded-full active:scale-95 mx-3"
             >
               <FaGoogle />

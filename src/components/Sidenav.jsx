@@ -8,6 +8,7 @@ import {
   AiOutlineOrderedList,
   AiOutlineMail,
 } from "react-icons/ai";
+import { PiPersonArmsSpread } from "react-icons/pi";
 
 function Sidenav() {
   const [nav, setNav] = useState(false);
@@ -15,13 +16,13 @@ function Sidenav() {
     setNav(!nav);
   };
   return (
-    <div>
+    <div className="scroll-none">
       {nav ? (
         <>
-          <TiTimes
-            onClick={handleNav}
-            className="fixed right-2 top-2 z-[99] sm:hidden text-black text-2xl"
-          />
+          <div className="fixed right-3 top-3 z-[99] sm:hidden text-black text-2xl box-shadow2 p-1 bg-white rounded-md">
+            <TiTimes onClick={handleNav} />
+          </div>
+
           <div className="fixed flex flex-col justify-center items-center w-full h-screen sm:hidden bg-white/40 z-[20]  ease-in-out duration-100 ">
             <a
               onClick={handleNav}
@@ -49,11 +50,11 @@ function Sidenav() {
             </a>
             <a
               onClick={handleNav}
-              href="#resume"
+              href="#skill"
               className="flex justify-center items-center w-[70%] rounded-full shadow-lg shadow-red-200 active:bg-red-600 ease-in-out duration-300  bg-gray-200 m-3 p-2 cursor:pointer hover:scale-110"
             >
-              <AiOutlineOrderedList size={20} />
-              <span className="pl-2">Resume</span>
+              <PiPersonArmsSpread size={20} />
+              <span className="pl-2">Skill</span>
             </a>
             <a
               onClick={handleNav}
@@ -63,14 +64,21 @@ function Sidenav() {
               <AiOutlineMail size={20} />
               <span className="pl-2">Contact</span>
             </a>
+            <a
+              onClick={handleNav}
+              href="#resume"
+              className="flex justify-center items-center w-[70%] rounded-full shadow-lg shadow-red-200 active:bg-red-600 ease-in-out duration-300  bg-gray-200 m-3 p-2 cursor:pointer hover:scale-110"
+            >
+              <AiOutlineOrderedList size={20} />
+              <span className="pl-2">Resume</span>
+            </a>
           </div>
         </>
       ) : (
         <>
-          <FaBars
-            onClick={handleNav}
-            className="fixed right-3 top-3 z-[99] sm:hidden text-black "
-          />
+          <div className="fixed right-3 top-3 z-[99] sm:hidden text-black box-shadow2 p-2 bg-white rounded-md">
+            <FaBars onClick={handleNav} className="" />
+          </div>
         </>
       )}
       <div className="sm:flex hidden h-screen z-[10] fixed">
@@ -94,16 +102,22 @@ function Sidenav() {
             <AiOutlineBarChart />
           </a>
           <a
-            href="#resume"
+            href="#skill"
             className="p-3 m-2 shadow-lg rounded-full bg-gray-100 shadow-red-200 active:bg-red-600 active:scale-95 ease-in-out duration-300"
           >
-            <AiOutlineOrderedList />
+            <PiPersonArmsSpread />
           </a>
           <a
             href="#contact"
             className="p-3 m-2 shadow-lg rounded-full bg-gray-100 shadow-red-200 active:bg-red-600 active:scale-95 ease-in-out duration-300"
           >
             <AiOutlineMail />
+          </a>
+          <a
+            href="#resume"
+            className="p-3 m-2 shadow-lg rounded-full bg-gray-100 shadow-red-200 active:bg-red-600 active:scale-95 ease-in-out duration-300"
+          >
+            <AiOutlineOrderedList />
           </a>
         </div>
       </div>
